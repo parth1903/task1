@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    background: linear-gradient(90deg,#b7b78a 50%,#3c623c 50%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: lightgoldenrodyellow;
+    width: 90%;
+    height: 90vh;
+
+}
+.navbar .logo{
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 3px solid green;
+    border-radius: 50%;
+    border-right-color: transparent;
+    position: relative;
+}
+.navbar .logo::before{
+    content: "PADMAVTI ORGANIC";
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 53%;
+    left: 92%;
+    transform:translate(-33%,-51%)
+}
+.navbar{
+    width: 90%;
+    margin: auto;
+    height: 15vh;
+}
+.navbar,.navlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navlist{
+   
+    margin-left:42rem;
+}
+.navbar li{
+    list-style: none;
+    padding: 20px;
+    
+}
+.navbar a{
+    color: black;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.hero{
+    display: flex;
+  justify-content: center;
+    align-items: center; 
+     padding: -3px 50px; 
+    margin-bottom:30rem;
+}
+.hero img{
+    width: 40vw;
+}
+.slider-wrapper{
+    position: relative;
+    max-width: 40rem;
+     margin: 0 auto; */
+}
+.slider{
+     display: flex;  
+     aspect-ratio: 3/3 ;
+     overflow-x: hidden; 
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: contain;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: relative;
+    bottom: 6.25rem;
+    left: 50%;
+    transition: translateX(-50%);
+     z-index: 1;
+}
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #060606;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+    margin-bottom: 20;
+}
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 4px solid green;
+    padding: 20px 50px ;
+}
+.content h3{
+    color: rgb(73,73,73);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+.content h1{
+    font-size: 50px;
+    color: #3c6255;
+}
+.content p{
+    color: black;
+    font-size: 18px ;
+    line-height: 30px;
+}
+.content button{
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    background-color: green;
+    cursor: pointer;
+
+}
+.content button:hover{
+    background-color: white;
+    color: #3c623c;
+}
+
+/* ======================== */
+.icons {
+	display: flex;
+	column-gap: 25px;
+}
+.icon {
+	display: inline-flex;
+	width: 60px;
+	height: 60px;
+	text-decoration: none;
+	font-size: 26px;
+	color: hsl(67, 93%, 49%);
+	border-radius: 50%;
+	outline: 2px solid #131312;
+	transition-property: outline-offset, outline-color, background-color;
+	transition-duration: 0.25s;
+}
+.icon:hover {
+	outline-offset: 4px;
+}
+.icon i {
+	margin: auto;
+}
+.icon:hover i {
+	animation: shake 0.25s;
+}
+.icon--instagram:hover {
+	background-image: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	outline-color: #a02d76;
+}
+.icon--twitter:hover {
+	background-color: #1da1f2;
+	outline-color: #1da1f2;
+}
+.icon--linkedin:hover {
+	background-color: #0077b5;
+	outline-color: #0077b5;
+}
+.icon--github:hover {
+	background-color: #2ea44f;
+	outline-color: #2ea44f;
+}
+@keyframes shake {
+	10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-15deg);
+	}
+	30% {
+		transform: rotate(15deg);
+	}
+}
+
+
+
+
+
+
+@media screen and (max-width: 796px){
+    .card{
+        position: relative;
+    }
+    .navlist{
+        position: absolute;
+        flex-direction:  column;
+        right: -70%;
+        top: 0;
+        background-color: #b7b78a;
+        width: 300px;
+        height: 100%;
+        justify-content: center;
+
+
+    }
+    .navbar-active{
+        right: 0;
+    }
+    #hambuger{
+        display: block;
+        z-index: -auto;
+    }
+}
+    
